@@ -33,4 +33,8 @@ export class Message {
     get payload() {
         return this._payload;
     }
+
+    get lockTime() {
+        return this._lockTime;
+    }
 }
