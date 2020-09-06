@@ -19,7 +19,10 @@ export class Queue {
         this.queue.forEach((message) => {
             if (message.status === MESSAGE_STATUS.UNLOCKED) {
                 message.lock();
-                messages.push(message);
+                messages.push({
+                    id: message.id,
+                    payload: message.payload,
+                });
             }
         });
         return messages;
