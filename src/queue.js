@@ -1,5 +1,8 @@
 import { Message } from "./message";
 import {MESSAGE_STATUS} from "./constants";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 export class Queue {
     constructor(maxTimeToProcess, intervalBetweenChecks) {

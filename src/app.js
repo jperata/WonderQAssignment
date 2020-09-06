@@ -25,7 +25,7 @@ app.get('/poll', function (req, res) {
     res.send(messages);
 });
 
-app.get('/process/:id', function (req, res) {
+app.post('/process/:id', function (req, res) {
     const id = req.params.id;
     if (!id) {
         res.status(400).send("Id is required to process");
