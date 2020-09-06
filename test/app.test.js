@@ -61,13 +61,13 @@ describe("App tests", () => {
     describe("/process", () => {
         test("Should return an empty response on success", () => {
             return request(app)
-                .get('/process/good-id')
+                .post('/process/good-id')
                 .expect(204)
         });
 
         test("Should return a 404 when there is no element to process", () => {
             return request(app)
-                .get('/process/id')
+                .post('/process/id')
                 .expect(404)
         });
 
